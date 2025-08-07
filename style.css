@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* *, *::before, *::after {
+  box-sizing: border-box;
+} */
+:root{
+    --a:0;
+}
+html,body{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+ .container{
+    margin: 8px;
+    gap: 8px;
+    height: 91%;
+}
+.lib{
+    width: 28%;
+    background-color: #050505;
+    position: relative;   
+    height: 86.5%;
+}
+.footer{
+     display: flex; 
+     gap: 27px;
+    font-size: 10px;
+    height: 10%;
+    background-color:#121212;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.footer a{
+   color: grey; 
+   margin-top: 33px;
+}
+.heading{
+    display: flex;
+    height: 10%;
+     background-color:#121212;
+     border-top-left-radius: 7px;
+     border-top-right-radius: 7px;
+}
+.heading h2{  
+    font-size: 19px;
+    padding:22px 22px 0px 22px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.heading img{
+    display: none;
+}
+.songbox{
+    height: 80%;
+    background-color:#121212;
+    overflow-y: hidden;
+}
+.right{
+    width: 71.5%;
+    background-color:#101010;
+    border-radius: 7px;
+    position: relative;
+    height: 86.5%;
+    overflow-x: hidden;
+    overflow-y: auto;   /* vertical zarurat par aaye */
+    position: relative;
+}    
+.home {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  height: 61px;
+  padding: 0px 20px;
+  width: 100%;
+  flex-wrap: nowrap; 
+  /* overflow-x: auto;   */
+}
+.line{
+   background: #fff;
+    height: 25px;
+    width: 2px;
+    margin-left: 12px;
+    margin-right: 14px;
+    margin-top: 22px;
+}
+.right-side{
+    display: flex;
+    gap: 12px; 
+    margin-left: auto;
+    flex-wrap: nowrap;
+}
+.text {
+    transform-origin: center;
+    backface-visibility: hidden;     /* fixes anti-aliasing on some browsers */
+    -webkit-font-smoothing: antialiased;
+}
+.text {
+    display: inline-block;            /* important for stable scaling */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    will-change: transform;           /* performance optimization */
+}
+
+.text:hover {
+    transform: scale(1.02);            /* clean zoom */
+    /* no font-size, font-weight changes */
+}
+
+
+.text p{ 
+   padding-top: 20px;
+    font-weight:900;
+    font-size: 20px;
+    color:#afafaf;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text p:hover{
+    color: white;
+} 
+
+.home #logo{
+   width: 35px;
+   cursor: pointer;
+}
+.btn1 {
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    cursor: pointer;
+    border: 2px solid black;
+    margin: 6px 0px 0px 25px; 
+    background-color: #1f1f1f;
+}
+.btn1:hover{
+      background-color:#2f2f2f;
+}
+.btn1 img{
+     width: 30px;
+}
+.btn2 {
+   border-radius: 27px;
+   border: 2px solid black;
+   margin: 7px 8px 0px 0px;
+   padding: 10px 15px;
+   display: flex;
+   color: #afafaf;
+   font-size: 19px;
+   gap:10px;
+   font-weight: 500;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   align-items: center;
+   background-color: #1f1f1f;
+   flex-grow: 1;
+   max-width: 500px;
+   min-width: 250px;
+   transition: all 0.3s ease;
+}
+.btn2:hover{
+    background-color:#2f2f2f;
+    border: 0.2px solid rgb(99, 99, 99);
+}
+.btn2 img{
+    width: 30px;
+    height:auto;
+    cursor: pointer;
+}
+.invert1{
+    filter: invert(1);
+}
+.installApp{
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    will-change: transform;  
+}
+.installApp{
+    transform-origin: center;
+    backface-visibility: hidden;     /* fixes anti-aliasing on some browsers */
+    -webkit-font-smoothing: antialiased;
+}
+.installApp:hover{
+    transform: scale(1.02);
+}
+.installApp p:hover{
+    color: white;
+}
+.installApp img{
+    width: 18px;
+   padding-top: 10px;
+}
+.installApp p{
+    padding-top: 24px;
+    color:#afafaf;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: 700;
+}
+.btn3{
+    display: inline-block;
+    margin: 6px;
+    border-radius: 5px;
+    background-color: black;
+    padding: 8px;
+    color: #afafaf;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.btn3:hover {
+    transform: scale(1.02);
+    color: white;
+}
+
+.btn4:hover {
+    transform: scale(1.03);
+    background-color: #eeebeb;
+}
+
+.btn4{
+    display: inline-block;
+    margin: 6px 0px 0px 4px;
+    border: none;
+    outline: none;
+     border-radius: 30px;
+     width: 115px;
+     height: 53px;
+     padding: 10px;
+     background-color: white;
+     color:black;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 20px;
+     font-weight:bold;
+     cursor: pointer;
+}
+.spotify-playlist{
+   padding: 16px 16px 0px 16px;
+   height: 100%;
+   overflow-y: auto;
+}
+.cardContainer {
+    display: flex;
+    position: relative;
+    max-height: 900px;
+    gap: 10px;
+    margin: 8px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    flex: 1 1 auto;
+    cursor: pointer;
+    -webkit-overflow-scrolling: touch;
+}
+/* .cardContainer > * {
+  flex: 0 0 18%; 
+  min-width: 0;  
+} */
+.card{
+    flex: 0 0 18%;
+    /* min-width: 0; */
+    max-width: 18%;
+    padding: 10px;
+    position: relative; 
+    background-color:#101010;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+/* .card > * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+  */
+.textOfspotify {
+    display: flex;
+    justify-content: space-between;
+}
+.textOfspotify h1{
+    padding-left: 20px;
+     cursor: pointer;
+       color: white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight:bold;
+}
+.textOfspotify h1:hover{
+    text-decoration: underline;
+}
+.textOfspotify p{
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 18px 10px 0px 0px;
+      color: rgb(157, 157, 157);
+       cursor: pointer;
+       font-weight: bold;
+}
+.textOfspotify p:hover{
+    text-decoration: underline;
+}
+.card p{
+   color: rgb(157, 157, 157);
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight:bold;  
+   /* word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  margin: 0; */
+}
+.card:hover{
+    background-color:#1a1a1a;
+    border-radius: 8px;
+     /* transition: all 0.9s; */
+     --a: 1;
+     min-height: auto;
+}
+.card h2:hover{
+  text-decoration: underline;
+}
+.card h2{
+ color: white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight:bold;
+    /* word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  margin: 0; */
+}
+
+.card p:hover{
+  text-decoration: underline;
+ 
+}
+.card img {
+    max-width: 100%;
+    object-fit:contain;
+    border-radius: 10px;
+    display: block;
+    height: auto;
+}
+.play{
+    position: absolute;
+    top: 140px;
+    right: 17px;
+    opacity: var(--a);   
+    transition: all 1s ease-out;
+}
+.play-bar{
+    position:absolute;
+    margin-bottom: 10px;
+    bottom: 0;
+    /* margin: 0; */
+    padding: 0;
+    color: white;
+    background-color:#7c66ca;
+    width: 99%;
+    height: 88px;
+}
+.songbutton{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.songlist ul{
+    padding: 20px 40px;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.songlist ul li{
+    list-style-type: decimal;
+    display: flex;
+    cursor: pointer;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 12px 0px;
+    justify-content: space-between;
+}
+.songlist{
+    height: 558px;
+    overflow-y: auto;
+    flex: 1;
+}
+/* .songlist .info{
+    width: 100%;
+  max-width: 344px;
+  box-sizing: border-box;
+} */
+.playNow{
+    display: flex;
+     justify-content: center;
+    align-items: center;
+}
+.playNow span{
+    width: 64px;
+    
+}
+.seekbar{
+    height: 4px;
+    width: 99.5%;
+    background-color:black;
+    position: absolute;
+    bottom: 1px;
+    /* margin: 0px 0px 5px 6px; */
+    left: 5px;
+    bottom: 6px;
+    cursor: pointer;
+}
+.circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: black;
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    transition: left 0.5s;
+}
+.songbutton img{
+  cursor: pointer;
+  width: 40px;
+}
+.abovebar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 5px;
+}
+.songinfo {
+    width: 238px;
+    color: black;
+     word-break: break-all;
+}
+.songtime{
+    color: black;
+    margin-top: 5px;
+}                    
+.timeVol{
+    display: flex; 
+      justify-content: space-evenly;
+    align-items: center;
+}    
+.vol{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   gap: 22px;
+} 
+.range input{
+    cursor: pointer;
+}
+.hamburger{
+    display: none;
+}
+.info div{
+    word-break: break-all;
+}

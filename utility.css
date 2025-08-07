@@ -1,0 +1,331 @@
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background:transparent;
+  border-radius: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  /* border-radius: 6px; */
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+  cursor: pointer;
+  /* border-radius: 6px; */
+}
+
+@media (max-width: 1300px) {
+  .hamburger {
+     display: block;
+   }
+  .text,
+  .line,
+  .installApp {
+    display: none;
+  }
+  
+  /* Make search bar into a circular button */
+  .btn2 {
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    min-width: unset;
+    max-width: unset;
+    flex-grow: 0;
+  }
+   .btn1 {
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+  }
+  .btn2 span {
+    display: none; /* Hide "What do you want to play?" text */
+  }
+
+  /* Logo size adjust for mobile */
+  .home #logo {
+    width: 30px;
+  }
+
+  /* Adjust right-side to not overflow */
+  .right-side {
+    gap: 10px;
+  }
+  .button{
+    display: flex;
+  }
+  .btn3{
+    margin: 5px 3px;
+    border-radius: 20px;
+    background-color: rgb(255, 250, 250);
+    padding: 5px;
+    color: #030303;
+    font-size: large;
+    font-weight: 600;
+     width: 70px;
+     height: 45px;
+  }
+  .btn4{
+     border-radius:20px;
+     width: 70px;
+     height: 45px;
+     padding: 0px;
+}
+.lib {
+    position: absolute; 
+     left: -120%;
+    transition: all .3s; 
+        z-index: 1; 
+        width: 353px; 
+        background-color: #121212; 
+        height: 83%; 
+    }
+    .right{
+    width: 100%;
+    height: 83%;
+  }
+  .play-bar{
+    width: 98.5%;
+    height: 130px;
+}
+.seekbar {
+    width: 97%;
+}
+.abovebar {
+    display: block;
+}
+.songinfo {
+    display: flex;
+    justify-content: center;
+    width: 97.5%;
+    margin: 5px;
+}
+.songbutton {
+    margin: 5px;
+}
+.timeVol {
+    justify-content: space-between;
+    margin: 0px 16px;
+}
+.heading img{
+   display: block;
+   margin-left:160px;
+  width: 20px;
+}
+
+}
+ 
+/* @media (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    width: 45%;
+  }
+} */
+
+
+@media (max-width:800px) {
+  .footer a{
+    margin-top: 7px;
+  }
+   .cardContainer {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+  }
+  .play{
+    top: 500px;
+  }
+  .textOfspotify p{
+    padding: 12px 18px 0px 0px;
+  }
+    .play-bar{
+    width: 96%;
+    height: 130px;
+}
+  .card {
+    max-width:100%;
+    padding: 0;
+  }
+  .card img{
+    width: 100%;
+  }
+   .textOfspotify h1{
+    padding-left: 13px;
+   }
+   footer .right-foot { 
+    display: block;
+  }
+  .right-foot-item {
+    margin-bottom: 20px; 
+  }
+  .spotifspotify-playlist{
+    padding: 0px;
+  }
+  .btn3:hover {
+    color: rgb(7, 7, 7);
+    background-color: #e5e4e4;
+}
+}
+.album{
+  margin-top: 36px;
+
+}
+
+
+:root{
+    --a:0;
+}
+
+#circleContainer {
+  display: flex;
+  overflow-x: auto;   
+  overflow-y: hidden;
+  gap: 16px;
+   min-height: 270px;
+   cursor: pointer;
+     /* flex: 1 1 auto; */
+  /* optional smoothing on touch devices: */
+  /* -webkit-overflow-scrolling: touch; */
+}
+.circleContainer > * {
+  flex: 0 0 18%; /* fixed base width, shrink/grow controlled */
+  min-width: 0;  /* important for flex overflow behavior */
+}
+
+.singers {
+  width: 210px;
+  height: 210px;
+   padding: 8px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  flex-shrink: 0; 
+  cursor: pointer;
+}
+.singers p{
+   color: grey;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 16px;
+   font-weight:bold;
+  }
+
+
+.singers h2{
+  color: white;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 16px;
+   font-weight:bold;
+    padding-left: 20px;
+}
+.singers img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  padding: 8px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.singers:hover{
+    background-color:#1a1a1a;
+    border-radius: 8px;
+   --a: 1;
+   min-height: 255px;
+    
+}
+.play-btn{
+    position: absolute;
+    top: 145px;
+    left: 135px;
+    opacity: var(--a);   
+    transition: all 1s ease-out;
+    z-index: 4;
+}
+.singers p:hover{
+  text-decoration: underline;
+}
+
+.singers h2:hover{
+  text-decoration: underline;
+}
+
+.cardContainer::-webkit-scrollbar {
+  height: 6px;   
+}
+#circleContainer::-webkit-scrollbar {
+  height: 6px;   
+}
+
+footer{
+    width: 100%;
+    padding: 14px; 
+}
+
+.right-foot{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 15px;
+}
+.right-foot-item p{
+  font-size: 18px;
+  font-weight: bold;
+  color: white; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.right-foot-item{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.right-foot a:hover{
+  color: rgb(225, 223, 223);
+  text-decoration: underline;
+  text-decoration-thickness: 0.5%;
+}
+.right-foot a{
+   text-decoration: none;
+   font-size: 18px;
+  color: rgb(179, 179, 179); 
+  font-family: sans-serif;
+}
+ .separation{
+  height: 0.5px;
+  width: 97%;
+  background-color: rgb(57, 57, 57);
+  margin: 50px 20px;
+ }
+ .last-word{
+  margin-bottom: 50px;
+  font-size: 18px;
+  color: rgb(179, 179, 179); 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ /* .cardContainer,
+#circleContainer {
+  overscroll-behavior: contain;
+} */
